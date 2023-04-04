@@ -4,14 +4,6 @@ import { useState, useEffect } from "react";
 import SearchIcon from "./search.svg";
 const API_URL = "http://www.omdbapi.com/?apikey=4a3b711b";
 
-const movie1 = {
-  Title: "Avengers: Endgame",
-  Year: "2019",
-  Poster:
-    "https://m.media-amazon.com/images/M/MV5BMTI4MjQ5MjQxNF5BMl5BanBnXkFtZTgwNjQ5NjQzNzE@._V1_SX300.jpg",
-  imdbID: "tt4154796",
-  Type: "movie",
-};
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,7 +14,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies("avengers");
+    searchMovies("");
   }, []);
   return (
     <div className="App">
